@@ -9,7 +9,7 @@ a {
 i {
     height: 20px;
 }
-li:hover {
+a:hover {
     background-color: #2f0e63;
     border-left: 4px solid #e30be0;
 }
