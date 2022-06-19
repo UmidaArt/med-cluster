@@ -1,11 +1,10 @@
 import './App.css';
 import {BrowserRouter,Routes, Route} from "react-router-dom";
-import Login from "./Components/Login";
-import MainPage from "./Components/MainPage";
-import Tasks from "./Components/Tasks";
-import Calendar from "./Components/Calendar";
-import Capabilities from "./Components/Сapabilities";
-import Projects from "./Components/Projects";
+import Login from "./Pages/Login";
+import Tasks from "./Pages/Tasks";
+import Calendar from "./Pages/Calendar";
+import Capabilities from "./Pages/Сapabilities";
+import Projects from "./Pages/Projects";
 
 const App = () => {
 

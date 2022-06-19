@@ -41,6 +41,7 @@ const Login = () => {
         name === error.name && (
             <div className="error">{error.message}</div>
         );
+
     return (
         <div className="app">
             {isSubmitted ? <Projects to/> :

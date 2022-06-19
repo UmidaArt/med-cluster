@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import Navigation from "../Navigation/Navigation";
+import Navigation from "../../Components/Navigation/Navigation";
 import './Projects.css'
 import img from '../../assets/images/man-png.png'
 import axios from "axios";
-import Modal from "../Modal";
+import Modal from "../../Components/Modal";
 import 'boxicons'
 
 const Projects = () => {
