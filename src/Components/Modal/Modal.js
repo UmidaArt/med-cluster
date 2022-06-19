@@ -22,8 +22,6 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
         },
         validationSchema: Yup.object({
             img: Yup.string()
-                // .min(3, 'Must be 3 characters more')
-                // .max(15, 'Must be 15 characters or less')
                 .required('Required'),
             title: Yup.string()
                 .min(3, 'Must be 3 characters more')
@@ -34,11 +32,11 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
                 .max(20, 'Must be 20 characters or less')
                 .required('Required'),
             admin: Yup.string()
-                .min(6, 'Must be 3 characters more')
+                .min(2, 'Must be 2 characters more')
                 .max(30, 'Must be 20 characters or less')
                 .required('Required'),
             manager: Yup.string()
-                .min(6, 'Must be 3 characters more')
+                .min(2, 'Must be 2 characters more')
                 .max(30, 'Must be 20 characters or less')
                 .required('Required'),
         }),
