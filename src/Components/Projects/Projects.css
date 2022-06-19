@@ -21,6 +21,7 @@ input {
 }
 .projectBlock {
     display: flex;
+    flex-wrap: wrap;
 }
 .projectCard {
     width: 250px;
@@ -63,4 +64,17 @@ input {
 }
 .icon {
     cursor: pointer;
+}
+@media (max-width: 700px) {
+    .projectCard {
+        margin: 20px auto;
+    }
+}
+@media (max-width: 385px) {
+    .projectCard {
+        width: 220px;
+    }
+    .changeDisplay {
+        display: block;
+    }
 }
