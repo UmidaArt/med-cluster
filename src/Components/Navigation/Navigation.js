@@ -7,10 +7,10 @@ const Navigation = () => {
     const isActive = ({isActive}) => isActive ? 'active-link' : ''
     return (
         <div className="navigation">
-            <NavLink to="/tasks" className={isActive}><box-icon name='qr' color="#fff"></box-icon>Задачи и работы</NavLink>
-            <NavLink to="/projects" className={isActive}><box-icon name='qr' color="#fff"></box-icon>Проекты</NavLink>
-            <NavLink to="/calendar" className={isActive}><box-icon name='qr' color="#fff"></box-icon>Календарь</NavLink>
-            <NavLink to="/capabilities" className={isActive}><box-icon name='qr' color="#fff"></box-icon>Возможности</NavLink>
+            {/*<NavLink to="/tasks" className={isActive}><box-icon name='qr' color="#fff"/>Задачи и работы</NavLink>*/}
+            {/*<NavLink to="/projects" className={isActive}><box-icon name='qr' color="#fff"></box-icon>Проекты</NavLink>*/}
+            {/*<NavLink to="/calendar" className={isActive}><box-icon name='qr' color="#fff"></box-icon>Календарь</NavLink>*/}
+            {/*<NavLink to="/capabilities" className={isActive}><box-icon name='qr' color="#fff"></box-icon>Возможности</NavLink>*/}
         </div>
     );
 };

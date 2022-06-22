@@ -1,10 +1,19 @@
 import React from 'react';
-import Projects from "../../Pages/Projects";
 
 const MainPage = () => {
     return (
         <div>
-           <Projects/>
+            {/*<div className="columns-xs bg-purple-800">*/}
+            {/*    <aside>*/}
+            {/*        <nav>*/}
+            {/*            <a href=""><i className='bx bx-qr mr-2'></i>Задачи и работы</a>*/}
+            {/*            <a href=""><i className='bx bx-qr mr-2'></i>Проекты</a>*/}
+            {/*            <a href=""><i className='bx bx-qr mr-2'></i>Календарь</a>*/}
+            {/*            <a href=""><i className='bx bx-qr mr-2'></i>Возможности</a>*/}
+            {/*        </nav>*/}
+            {/*    </aside>*/}
+
+            {/*</div>*/}
         </div>
     );
 };

@@ -49,8 +49,8 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
 
     return (
         <div>
-            <div className="fixed justify-center flex w-full bg-white p-6">
-                <div className="absolute right-40 top-7 cursor-pointer font-extrabold" onClick={()=> {
+            <div className="fixed justify-center flex min-h-screen w-full bg-white p-6">
+                <div className="absolute right-9 top-7 cursor-pointer font-extrabold" onClick={()=> {
                     setOpenModal(false)
                 }}>X</div>
                 <form onSubmit={formik.handleSubmit} onKeyPress={handleEnter}>

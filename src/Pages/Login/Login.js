@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Projects from "../Projects";
 import './Login.css'
+import MainPage from "../../Components/MainPage";
 
 const Login = () => {
 
@@ -44,7 +45,7 @@ const Login = () => {
 
     return (
         <div className="app">
-            {isSubmitted ? <Projects to/> :
+            {isSubmitted ? <MainPage/> :
                 <section className="py-26 bg-white">
                     <div className="container px-4 mx-auto">
                         <div className="max-w-lg mx-auto mt-8 pt-8">

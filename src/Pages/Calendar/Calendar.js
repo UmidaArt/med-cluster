@@ -4,7 +4,6 @@ import Navigation from "../../Components/Navigation/Navigation";
 const Calendar = () => {
     return (
         <div className="projects">
-            <Navigation/>
             <h1 className="title">Календарь</h1>
         </div>
     );

@@ -19,7 +19,7 @@ const Projects = () => {
     },[])
 
     return (
-        <div className="projects">
+        <div className="med-projects">
             {
                 openModal &&
                 <Modal setOpenModal = {setOpenModal}
@@ -27,7 +27,6 @@ const Projects = () => {
                               setProjects = {setProjects}
                 />
             }
-            <Navigation/>
             <div className="infoPage">
                 <h1 className="title">Проекты</h1>
                 <div className="btnBox">
