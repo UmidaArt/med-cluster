@@ -79,14 +79,6 @@ const Login = () => {
                                     </div>
                                     <p>Запомнить пароль</p>
                                 </div>
-                                {/*<div className="flex flex-wrap -mx-4 mb-6 items-center justify-between">*/}
-                                {/*    /!*<div className="w-full lg:w-auto px-4 mb-4 lg:mb-0">*!/*/}
-                                {/*    /!*    <label htmlFor="" className="bg-red">*!/*/}
-                                {/*    /!*        <input type="checkbox" className="bg-[#e30be0]"/>*!/*/}
-                                {/*    /!*        <span className="ml-1 font-bold text-[#6B7280]">Запомнить пароль</span>*!/*/}
-                                {/*    /!*    </label>*!/*/}
-                                {/*    /!*</div>*!/*/}
-                                {/*</div>*/}
                                 <button
                                     className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white
                                         font-extrabold bg-[#D924E0FF] hover:bg-[#D924E0FF] border-3 border-[#D924E0FF] shadow rounded

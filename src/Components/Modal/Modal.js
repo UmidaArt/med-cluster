@@ -48,7 +48,7 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
     })
 
     return (
-        <div className="fixed justify-center flex w-full bg-white p-6">
+        <div className="fixed justify-center flex w-full bg-white p-6 modal">
             <div className="absolute right-9 top-7 cursor-pointer font-extrabold" onClick={()=> {
                 setOpenModal(false)
             }}>X</div>

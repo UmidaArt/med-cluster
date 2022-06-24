@@ -1,8 +1,14 @@
 .changePositionBlock {
-    width: 60px;
     display: flex;
-    justify-content: space-between;
 }
 .icon {
-    cursor: pointer;
+    margin: 0 5px;
+    font-size: 22px;
+    color: #6B7280 ;
+}
+.icon i:hover {
+    color: #5c14ce;
+}
+.changePositionBlock .active {
+    border-bottom: 2px solid #ce1adb;
 }
