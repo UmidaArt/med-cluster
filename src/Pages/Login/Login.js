@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import Projects from "../Projects";
 import './Login.css'
-import MainPage from "../../Components/MainPage";
+import SideBar from "../../Components/SideBar";
 
 const Login = () => {
 
@@ -45,7 +44,7 @@ const Login = () => {
 
     return (
         <div className="app">
-            {isSubmitted ? <MainPage/> :
+            {isSubmitted ? <SideBar/> :
                 <section className="py-26 bg-white">
                     <div className="container px-4 mx-auto">
                         <div className="max-w-lg mx-auto mt-8 pt-8">
@@ -56,7 +55,6 @@ const Login = () => {
                                         className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-grey-800 bg-white shadow border-2 border-grey-900 rounded"
                                         type="text"
                                         name="uname"
-                                        onChange={(e) => e.target.value}
                                         placeholder="логин"
                                         required
                                     />
@@ -68,20 +66,27 @@ const Login = () => {
                                         className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-grey-800 bg-white shadow border-2 border-grey-900 rounded"
                                         type="password"
                                         name="pass"
-                                        onChange={(e) => e.target.value}
                                         placeholder="**********"
                                         required
                                     />
                                     {errorMessage('pass')}
                                 </div>
-                                <div className="flex flex-wrap -mx-4 mb-6 items-center justify-between">
-                                    <div className="w-full lg:w-auto px-4 mb-4 lg:mb-0">
-                                        <label htmlFor="">
-                                            <input type="checkbox"/>
-                                            <span className="ml-1 font-bold text-[#6B7280]">Запомнить пароль</span>
-                                        </label>
+                                <div className="innerBox ">
+                                    <div className="check check1">
+                                        <input type="checkbox" id="check1"/>
+                                        <span></span>
+                                        <span><i className='bx bx-check'></i></span>
                                     </div>
+                                    <p>Запомнить пароль</p>
                                 </div>
+                                {/*<div className="flex flex-wrap -mx-4 mb-6 items-center justify-between">*/}
+                                {/*    /!*<div className="w-full lg:w-auto px-4 mb-4 lg:mb-0">*!/*/}
+                                {/*    /!*    <label htmlFor="" className="bg-red">*!/*/}
+                                {/*    /!*        <input type="checkbox" className="bg-[#e30be0]"/>*!/*/}
+                                {/*    /!*        <span className="ml-1 font-bold text-[#6B7280]">Запомнить пароль</span>*!/*/}
+                                {/*    /!*    </label>*!/*/}
+                                {/*    /!*</div>*!/*/}
+                                {/*</div>*/}
                                 <button
                                     className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white
                                         font-extrabold bg-[#D924E0FF] hover:bg-[#D924E0FF] border-3 border-[#D924E0FF] shadow rounded

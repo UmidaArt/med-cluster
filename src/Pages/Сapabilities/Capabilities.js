@@ -1,11 +1,13 @@
 import React from 'react';
-import Navigation from "../../Components/Navigation/Navigation";
+import LayOut from "../../Components/LayOut";
 
 const Capabilities = () => {
     return (
-        <div className="projects">
-            <h1 className="title">Возможности</h1>
-        </div>
+        <LayOut>
+            <div className="projects">
+                <h1 className="title">Возможности</h1>
+            </div>
+        </LayOut>
     );
 };
 

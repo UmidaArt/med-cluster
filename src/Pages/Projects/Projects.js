@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import Navigation from "../../Components/Navigation/Navigation";
 import './Projects.css'
-import img from '../../assets/images/man-png.png'
+import users from '../../Assets/images/man-png.png'
 import axios from "axios";
 import Modal from "../../Components/Modal";
-import 'boxicons'
+import LayOut from "../../Components/LayOut";
+import ChangePositionCards from "../../Components/ChangePositionCards";
 
 const Projects = () => {
 
@@ -23,52 +23,51 @@ const Projects = () => {
             {
                 openModal &&
                 <Modal setOpenModal = {setOpenModal}
-                              projects = {projects}
-                              setProjects = {setProjects}
+                       projects = {projects}
+                       setProjects = {setProjects}
                 />
             }
-            <div className="infoPage">
-                <h1 className="title">Проекты</h1>
-                <div className="btnBox">
-                    <h2>Список проектов</h2>
-                    <button className="btnAdd" onClick={() => setOpenModal(true)}>Добавить проект</button>
-                </div>
-                <div className="projectMain">
-                    <div className="projectBlock">
-                        {
-                            projects.map((student) => (
-                                <div className="projectCard" key={student.id}>
-                                    <img className="projectCardMainImg" src={student.img} alt="#"/>
-                                    <div className="projectInfo">
-                                        <h2 className="projectInfoTitle">{student.title}</h2>
-                                        <h3>{student.data}</h3>
-                                        <h3>{student.admin}</h3>
-                                        <h3>{student.manager}</h3>
-                                        <div className="personList">
-                                            <div className="person">
-                                                <img src={img} className='imgPerson' alt="#"/>
-                                            </div>
-                                            <div className="person">
-                                                <img src={img} className='imgPerson' alt="#"/>
-                                            </div>
-                                            <div className="person">
-                                                <img src={img} className='imgPerson' alt="#"/>
-                                            </div>
-                                            <div className="person">
-                                                <img src={img} className='imgPerson' alt="#"/>
+            <LayOut>
+                <div className="infoPage">
+                    <h1 className="title">Проекты</h1>
+                    <div className="btnBox">
+                        <h2>Список проектов</h2>
+                        <button className="btnAdd" onClick={() => setOpenModal(true)}>Добавить проект</button>
+                    </div>
+                    <div className="projectMain">
+                        <div className="projectBlock">
+                            {
+                                projects.map((student) => (
+                                    <div className="projectCard" key={student.id}>
+                                        <img className="projectCardMainImg" src={student.img} alt="#"/>
+                                        <div className="projectInfo">
+                                            <h2 className="projectInfoTitle">{student.title}</h2>
+                                            <h3><i className='bx bx-calendar-alt'/>{student.data}</h3>
+                                            <h3><i className='bx bx-user'/>{student.admin}</h3>
+                                            <h3><i className='bx bx-ruble'/>{student.manager}</h3>
+                                            <div className="personList">
+                                                <div className="person">
+                                                    <img src={users} className='imgPerson' alt="#"/>
+                                                </div>
+                                                <div className="person">
+                                                    <img src={users} className='imgPerson' alt="#"/>
+                                                </div>
+                                                <div className="person">
+                                                    <img src={users} className='imgPerson' alt="#"/>
+                                                </div>
+                                                <div className="person">
+                                                    <img src={users} className='imgPerson' alt="#"/>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))
-                        }
-                    </div>
-                    <div className="changeDisplay">
-                        <div className="icon"><box-icon name='qr'></box-icon></div>
-                        <div className="icon"><box-icon name='list-ul'></box-icon></div>
+                                ))
+                            }
+                        </div>
+                        <ChangePositionCards/>
                     </div>
                 </div>
-            </div>
+            </LayOut>
         </div>
     );
 };

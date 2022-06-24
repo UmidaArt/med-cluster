@@ -1,5 +1,5 @@
 .btnBox {
-   display: flex;
+    display: flex;
     justify-content: space-between;
     margin: 30px 0 30px;
     padding-top: 20px;
@@ -15,9 +15,7 @@
     padding: 5px 10px;
 }
 input {
-    border: 1px solid grey;
-    border-radius: 3px;
-    margin: 10px;
+    border: 1px solid #cbc8c8;
 }
 .projectBlock {
     display: flex;
@@ -39,7 +37,9 @@ input {
 }
 .projectInfoTitle {
     font-size: 20px;
-
+}
+.projectInfo h3 i {
+    margin: 5px 5px 0;
 }
 .personList {
     display: flex;
@@ -56,14 +56,6 @@ input {
 .projectMain {
     display: flex;
     justify-content: space-between;
-}
-.changeDisplay {
-    width: 60px;
-    display: flex;
-    justify-content: space-between;
-}
-.icon {
-    cursor: pointer;
 }
 @media (max-width: 700px) {
     .projectCard {

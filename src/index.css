@@ -8,12 +8,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: auto;
+  height: 100%;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.img {
+  width: 40px;
+  border-radius: 20px;
 }
 .projects {
   display: flex;
@@ -24,6 +27,7 @@ code {
 }
 .navBar .active {
   position: relative;
+  background-color: #2f0e63;
 }
 .navBar .active:before {
   position: absolute;
@@ -42,12 +46,13 @@ code {
 }
 .navigation {
   width: 25%;
-  height: 100vh;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
   background-color: #3f0790;
   color: white;
 }
 .infoPage {
-  height: 100vh;
   padding: 40px 50px 40px 20px;
 }
 @media (max-width: 700px) {
