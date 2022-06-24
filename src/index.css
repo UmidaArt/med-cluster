@@ -14,12 +14,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.app {
-  height: 100vh;
-}
 .img {
   width: 40px;
+  height: 40px;
   border-radius: 20px;
+  background-color: darkolivegreen;
 }
 .projects {
   display: flex;

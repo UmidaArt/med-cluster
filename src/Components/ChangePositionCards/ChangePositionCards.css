@@ -5,10 +5,8 @@
     margin: 0 5px;
     font-size: 22px;
     color: #6B7280 ;
+    cursor: pointer;
 }
 .icon i:hover {
     color: #5c14ce;
-}
-.changePositionBlock .active {
-    border-bottom: 2px solid #ce1adb;
 }
