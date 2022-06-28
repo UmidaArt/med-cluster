@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './Login.css'
 import Projects from "../Projects";
+import logo from "../../Assets/images/logo.png"
 
 const Login = () => {
 
@@ -47,7 +48,8 @@ const Login = () => {
             {isSubmitted ? <Projects/> :
                 <section className="py-26 bg-white">
                     <div className="container px-4 mx-auto">
-                        <div className="max-w-lg mx-auto mt-8 pt-8">
+                        <div className="max-w-lg mx-auto mt-8">
+                            <img src={logo} className="mainLogo" alt="#"/>
                             <form onSubmit={handleSubmit}>
                                 <div className="mb-6">
                                     <label className="block mb-2 ml-5 font-extrabold text-left text-[#6B7280]" htmlFor="">Логин</label>

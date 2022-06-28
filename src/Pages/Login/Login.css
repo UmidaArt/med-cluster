@@ -1,3 +1,7 @@
+.mainLogo {
+    width: 200px;
+    margin: 0 auto;
+}
 .error {
     color: red;
 }

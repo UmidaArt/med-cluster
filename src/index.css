@@ -26,6 +26,7 @@ code {
 }
 .main-page {
   width: 75%;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .navBar .active {
   position: relative;

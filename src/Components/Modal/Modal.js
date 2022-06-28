@@ -16,7 +16,8 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
         initialValues:{
             img: '',
             title: '',
-            data: '',
+            dataStart: '',
+            dataEnd: '',
             admin: '',
             manager: ''
         },
@@ -27,7 +28,11 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
                 .min(3, 'Must be 3 characters more')
                 .max(20, 'Must be 20 characters or less')
                 .required('Required'),
-            data: Yup.string()
+            dataStart: Yup.string()
+                .min(3, 'Must be 3 characters more')
+                .max(20, 'Must be 20 characters or less')
+                .required('Required'),
+            dataEnd: Yup.string()
                 .min(3, 'Must be 3 characters more')
                 .max(20, 'Must be 20 characters or less')
                 .required('Required'),
@@ -41,7 +46,7 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
                 .required('Required'),
         }),
         onSubmit: async (values) => {
-            const addProject = await axios.post('https://62abbf75bd0e5d29af14c5a7.mockapi.io/projects', values)
+            const addProject = await axios.post('https://62b95a18ff109cd1dc900844.mockapi.io/projects', values)
             setProjects([...projects, addProject.data])
             setOpenModal(false)
         }
@@ -49,10 +54,10 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
 
     return (
         <div className="fixed justify-center flex w-full bg-white p-6 modal">
-            <div className="absolute right-9 top-7 cursor-pointer font-extrabold" onClick={()=> {
+            <div className="close absolute right-9 top-7 cursor-pointer" onClick={()=> {
                 setOpenModal(false)
-            }}>X</div>
-            <form onSubmit={formik.handleSubmit} onKeyPress={handleEnter}>
+            }}><i className='bx bx-x'></i></div>
+            <form className="modalForm" onSubmit={formik.handleSubmit} onKeyPress={handleEnter}>
                 <div className="mb-5">
                     <label
                         htmlFor="img"
@@ -95,23 +100,43 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
                 </div>
                 <div className="mb-5">
                     <label
-                        htmlFor="date"
+                        htmlFor="dataStart"
                         className="mb-3 block text-base font-medium text-[#07074D]"
                     >
-                        дата
+                        дата начала
                     </label>
                     <input
                         type="date"
-                        name="data"
-                        id="date"
-                        placeholder="дата"
-                        value={formik.values.data}
+                        name="dataStart"
+                        id="dataStart"
+                        placeholder="дата начала"
+                        value={formik.values.dataStart}
                         onChange={formik.handleChange}
                         className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     />
-                    {formik.touched.data && formik.errors.data ? (
-                        <div className="text-red-500">{formik.errors.data}</div>
+                    {formik.touched.dataStart && formik.errors.dataStart ? (
+                        <div className="text-red-500">{formik.errors.dataStart}</div>
                     ) : null}
+                </div>
+                <div className="mb-5">
+                    <label
+                        htmlFor="dataEnd"
+                        className="mb-3 block text-base font-medium text-[#07074D]"
+                    >
+                        дата окончания
+                    </label>
+                    <input
+                        type="date"
+                        name="dataEnd"
+                        id="dataEnd"
+                        placeholder="дата окончания"
+                        value={formik.values.dataEnd}
+                        onChange={formik.handleChange}
+                        className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                    {/*{formik.touched.dataEnd && formik.errors.dataEnd ? (*/}
+                    {/*    <div className="text-red-500">{formik.errors.dataEnd}</div>*/}
+                    {/*) : null}*/}
                 </div>
                 <div className="mb-5">
                     <label
@@ -155,7 +180,7 @@ const Modal = ({projects, setProjects, setOpenModal}) => {
                 </div>
                 <div>
                     <button type="submit"
-                            className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
+                            className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none mb-5"
                     >
                         Create
                     </button>
