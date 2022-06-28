@@ -56,6 +56,7 @@ const Projects = () => {
                         </div>
                         <ChangePositionCards  positionCardsFlex={positionCardsFlex}
                                               positionCardsList={positionCardsList}
+                                              changeCards={changeCards}
                         />
                     </div>
                 </div>
